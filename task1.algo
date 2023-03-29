@@ -1,0 +1,15 @@
+ALGORITHM task1_algo
+VAR 
+ x:INTEGER:=0;
+ y:INTEGER:=0;
+ z:INTEGER:=0;
+ i:integer:=0;
+BEGIN
+ i=x;
+ x=y;
+ y=z;
+ z=i;
+ write(x);
+ write(y);
+ write(z);
+END
