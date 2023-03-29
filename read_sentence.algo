@@ -1,0 +1,26 @@
+ALGORITHM read_sentence
+VAR
+    c:char:= '';
+    nc:INTEGER:=0;// numbre of characters
+    nw:INTEGER:=0;//numbre of words
+    nv:INTEGER:=0;//numbre of vowels
+BEGIN
+WHILE (c <>'.') DO
+read (c)
+    nc=nc+1;
+
+IF (c <>' ') THEN
+    nw=nw;
+ELSE
+    nw=nw+1;
+END_IF
+IF (c='a' OR 'e' OR 'i' OR 'o' OR 'u' OR 'y' ) THEN
+    nv=nv+1;
+ELSE
+    nv=nv;
+END_IF
+END_WHILE 
+Write("The length of the sentence is ",nc);
+Write("The number of words in the sentence is ",nw);
+Write("he number of vowels in the sentence. is ",nv);
+END
