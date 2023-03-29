@@ -1,0 +1,33 @@
+ALGORITHM task2_algo
+VAR
+ r1:float:=0.7;
+ r2:float:=0.4;
+ r3:float:=0.2;
+ ins:float:=0.3;
+ p_d:INTEGER:=100;
+ vat:float:=0.18;
+ d:INTEGER;//number of days
+ kl:INTEGER:=0;//number of kilometers
+ Tk:float;//total cost for rent by kilometers
+ Td:float;//total cost for rent by day
+BEGIN
+
+ read(kl);
+ read(d);
+
+IF (kl<=100) THEN
+    Tk=((kl*r1)+(d*ins))*VAT;
+ END_IF
+IF (kl>100 and kl<=1000) THEN
+    Tk=((kl-100)*r2+(100*r1)+(d*ins))*VAT;
+END_IF) 
+IF (kl>1000) THEN
+    Tk=((kl-1000)*r3+(899*r2)+(100*r1)+(d*ins))*VAT;
+END_IF
+
+Td=((p_d*d)+(ins*d))*VAT;
+IF (Tk<Td) THEN
+    write("rental by kilometere is more suitable");
+    ELSE
+    write("daly rate is more suitable");
+END_IF
